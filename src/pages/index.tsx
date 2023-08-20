@@ -1,5 +1,6 @@
 import { useCompletion } from "ai/react";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import TextareaAutosize from "react-textarea-autosize";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,6 +14,10 @@ export default function Home() {
 
   return (
     <main className={`max-w-md mx-auto pt-20 ${inter.className}`}>
+      <Head>
+        <title>Rewriter</title>
+      </Head>
+
       <h1 className="text-2xl font-bold mb-8">Rewriter</h1>
 
       <form onSubmit={handleSubmit} className="mb-8">
